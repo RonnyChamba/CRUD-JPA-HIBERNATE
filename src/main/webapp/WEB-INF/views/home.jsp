@@ -22,6 +22,7 @@
 			<p> <a href ="tipoViaje">Operaciones Tipo Viaje</a> </p>
 			<p> <a href ="tipoTransporte">Operaciones Tipo Transporte</a> </p>
 				<p> <a href ="transporte">Operaciones Transporte</a> </p>
+					<p> <a href ="destino">Operaciones Destino</a> </p>
 				
 		</div>
 

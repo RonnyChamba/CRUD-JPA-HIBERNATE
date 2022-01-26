@@ -64,7 +64,7 @@ public class ControllTransporte {
 			mapTipoTransporte.put( t.getCodigo(), t.getTipo());
 		}
 
-		transporte.setMapTransportes( mapTipoTransporte);
+		
 		
 		for(Conductor c : conductores) {
 			
@@ -72,6 +72,7 @@ public class ControllTransporte {
 		}
 		
 		transporte.setMapConductores(mapConductor);
+		transporte.setMapTransportes( mapTipoTransporte);
 		 LOGGER.info("Nuevo modelo transporte: "+ transporte );
 		model.addAttribute("nuevoTransporte", transporte);
 		
@@ -113,9 +114,7 @@ public class ControllTransporte {
 		for(TipoTransporte t : tiposTransportes) {
 			mapTipoTransporte.put( t.getCodigo(), t.getTipo());
 		}
-
-		transporte.setMapTransportes( mapTipoTransporte);
-		
+	
 		for(Conductor c : conductores) {
 			
 			mapConductor.put( c.getCodigo(), c.getNombre() + " " + c.getApellido());
