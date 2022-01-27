@@ -1,13 +1,18 @@
 package com.ideas.app.jpa.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -44,6 +49,10 @@ public class Empleado {
 	@Column(name = "EMPLEADOS_SAL")
 	private double salario;
 
+	
+	@OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL,fetch = FetchType.LAZY, orphanRemoval = true)
+	private List<Compra> compras = new ArrayList<Compra>();
+	
 	
 	@Transient
 	private Map<String, String> tiposEstados;
@@ -155,6 +164,14 @@ private void initEstadosCivil() {
 	
 	
 	
+	public List<Compra> getCompras() {
+		return compras;
+	}
+
+	public void setCompras(List<Compra> compras) {
+		this.compras = compras;
+	}
+
 	@Override
 	public String toString() {
 		return "Empleado [codigo=" + codigo + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido
