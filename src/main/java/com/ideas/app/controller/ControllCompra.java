@@ -114,6 +114,6 @@ public class ControllCompra {
 		LOGGER.info("Datos compra a guardar: " + compra);
 			
 		compraService.add(compra);
-		return "redirect:/";
+		return "redirect:/factura";
 	}
 }

@@ -21,7 +21,17 @@ public class FacturaServiceImpl implements FacturaService {
 	@Override
 	public Iterable<Factura> list() {
 		
-		return  facturaRepository.findAll();
+		Iterable<Factura> facturas = facturaRepository.findAll();
+		
+		for(Factura factura : facturas ) {
+			
+			factura.getCompra().getCliente().toString();
+			factura.getCompra().getEmpleado().toString();
+			factura.getCompra().getDestino().toString();
+			factura.getCompra().getTransporte().toString();
+			
+		}
+		return  facturas;
 	}
 
 	@Override
