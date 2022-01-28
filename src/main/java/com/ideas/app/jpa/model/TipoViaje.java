@@ -33,7 +33,7 @@ public class TipoViaje {
 	private double precio;
 	
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "tipoViaje", fetch = FetchType.LAZY, orphanRemoval = true)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "tipoViaje", fetch = FetchType.LAZY)
 	private List<Destino> destinos;
 	
 	

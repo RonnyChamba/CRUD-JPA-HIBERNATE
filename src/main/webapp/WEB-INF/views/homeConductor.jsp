@@ -9,8 +9,8 @@
 <link href="static/bootstrap-5/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-
-
+	
+	<c:set var="context" value="<%=application.getContextPath()%>" />
 	<div class="container-fluid text-center p-2">
 
 		<h1>Conductores</h1>
@@ -58,7 +58,7 @@
 			</table>
 		</div>
 
-
+	<p class="mt-3"> <a href=" ${context}/index.jsp">Volver al menu principal</a> </p>
 
 	</div>
 

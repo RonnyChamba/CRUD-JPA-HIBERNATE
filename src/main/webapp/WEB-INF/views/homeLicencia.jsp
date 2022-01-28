@@ -11,7 +11,8 @@
 </head>
 <body>
 
-
+	<c:set var="context" value="<%=application.getContextPath()%>" />
+	
 	<div class="container-fluid text-center p-2">
 		<h1>Licencias | <c:out value="${nuevaLicencia.conductor.nombre} ${nuevaLicencia.conductor.apellido} "/> </h1>
 		
@@ -100,7 +101,11 @@
 			</table>
 		</div>
 
-
+		<div class="row">
+		
+			<p class="col-sm-6"> <a href="${context}/index.jsp">Volver al menu principal</a> </p>
+			<p class="col-sm-6"> <a href="conductor">Ver conductores</a> </p>
+		</div>
 
 	</div>
 

@@ -12,6 +12,7 @@
 
 <div class="container-fluid text-center p-2">
 
+	<c:set var="context" value="<%=application.getContextPath()%>" />
 		<h1>Transportes</h1>
 		<div class ="mt-5">
 		
@@ -61,7 +62,7 @@
 		</div>
 
 
-
+	<p class=""> <a href=" ${context}/index.jsp">Volver al menu principal</a> </p>
 	</div>
 
 </body>

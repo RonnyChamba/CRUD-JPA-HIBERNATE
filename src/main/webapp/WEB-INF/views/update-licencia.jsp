@@ -13,9 +13,9 @@
 <body>
 	<c:set var="context" value="<%=application.getContextPath()%>" />
 
-	<div class="container-fluid">
+	<div class="container-fluid ">
 
-		<section class="content"
+		<section class="content text-center"
 			style="max-width: 1200px; margin-left: auto; margin-right: auto">
 
 			<h1 class="text-center mb-5">
@@ -61,15 +61,17 @@
 							style="width: 150px">
 					</div>
 					
-					<form:input path="conductor.codigo" cssClass="form-control" />
+					<form:input path="conductor.codigo" cssClass="form-control" type="hidden" />
 
 				</div>
 			</form:form>
 			
-			<p>Conductor: <c:out value="${conductor}"/> </p>
-			<p class="mt-3">
-				<a href=" ${context}/licencia?codigo=${conductor.codigo}">Ver mis licencias</a>
-			</p>
+			<div class="row">
+		
+			<p class="col-sm-6"> <a href="${context}/index.jsp">Volver al menu principal</a> </p>
+			<p class="col-sm-6"> <a href="${context}/licencia?codigo=${datosLicencia.conductor.codigo}">Ver mis licencias</a> </p>
+		  </div>
+			
 		</section>
 	</div>
 

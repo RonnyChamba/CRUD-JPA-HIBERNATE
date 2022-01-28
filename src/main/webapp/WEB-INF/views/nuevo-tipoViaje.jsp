@@ -13,7 +13,7 @@
 <body>
 <c:set var="context"  value="<%=application.getContextPath() %>"/>
 
-	<div class="container-fluid">
+	<div class="container-fluid text-center">
 
 		<section class="content"
 			style="max-width: 1200px; margin-left: auto; margin-right: auto">
@@ -52,8 +52,15 @@
 				</div>
 
 			</form:form>
-			<p class ="mt-3" > <a href=" ${context}/tipoViaje">Regresar al menu Tipo Viaje</a> </p>
+			
+			
+		<%-- 	<p class ="mt-3" > <a href=" ${context}/tipoViaje">Regresar al menu Tipo Viaje</a> </p> --%>
 		</section>
+		<div class="row">
+		
+			<p class="col-sm-6"> <a href="${context}/index.jsp">Volver al menu principal</a> </p>
+			<p class="col-sm-6"> <a href="${context}/tipoViaje">Volver al menu Tipo Viaje</a> </p>
+		</div>
 	</div>
 
 
