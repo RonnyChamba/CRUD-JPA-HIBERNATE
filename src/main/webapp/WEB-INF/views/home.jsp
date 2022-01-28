@@ -11,38 +11,37 @@
 </head>
 <body>
 
-	<div class="container">
+	<div class="container text-center">
 
 		<h1>Menu de opciones</h1>
 
-		<div>
-
-			<p>
-				<a href="cliente">Operaciones Cliente</a>
+		<div class ="row  mt-5">
+			<p class ="col-sm-6">
+				<a href="cliente" class ="text-decoration-none btn btn-primary p-0" style="width:150px; height:70px; line-height:70px">Modulo Cliente</a>
 			</p>
-			<p>
-				<a href="empleado">Operaciones Empleado</a>
+			<p class ="col-sm-6">
+				<a href="empleado" class ="text-decoration-none btn btn-primary p-0" style="width:150px; height:70px; line-height:70px">Modulo Empleado</a>
 			</p>
-			<p>
-				<a href="conductor">Operaciones Conductor</a>
+			<p class ="col-sm-6">
+				<a href="conductor" class ="text-decoration-none btn btn-primary p-0" style="width:150px; height:70px; line-height:70px">Modulo Conductor</a>
 			</p>
-			<p>
-				<a href="tipoViaje">Operaciones Tipo Viaje</a>
+			<p class ="col-sm-6">
+				<a href="tipoViaje" class ="text-decoration-none btn btn-primary p-0" style="width:150px; height:70px; line-height:70px">Modulo Tipo Viaje</a>
 			</p>
-			<p>
-				<a href="tipoTransporte">Operaciones Tipo Transporte</a>
+			<p class ="col-sm-6">
+				<a href="tipoTransporte" class ="text-decoration-none btn btn-primary p-0" style="width:150px; height:70px; line-height:70px">Modulo Tipo Transporte</a>
 			</p>
-			<p>
-				<a href="transporte">Operaciones Transporte</a>
+			<p class ="col-sm-6">
+				<a href="transporte" class ="text-decoration-none btn btn-primary p-0" style="width:150px; height:70px; line-height:70px">Modulo Transporte</a>
 			</p>
-			<p>
-				<a href="destino">Operaciones Destino</a>
+			<p class ="col-sm-6">
+				<a href="destino" class ="text-decoration-none btn btn-primary p-0" style="width:150px; height:70px; line-height:70px">Modulo Destino</a>
 			</p>
-			<p>
-				<a href="compra">Operaciones Compra</a>
+			<p class ="col-sm-6">
+				 <a href="compra" class ="text-decoration-none btn btn-primary p-0" style="width:150px; height:70px; line-height:70px">Modulo Compra</a>
 			</p>
-			<p>
-				<a href="factura">Ver ordenes de compra</a>
+			<p class ="col">
+				<a href="factura" class ="text-decoration-none btn btn-success p-0" style="width:150px; height:70px; line-height:70px">Ordenes de compra</a>
 			</p>
 
 		</div>
