@@ -29,7 +29,7 @@
 					<div class="mb-3 col-sm-6">
 						<form:label path="numBoletos">Numero boletos</form:label>
 						<form:input path="numBoletos" cssClass="form-control"
-							type="number"  />
+							type="number"  id="numBoletos" />
 
 					</div>
 					<div class="mb-3 col-sm-6">
@@ -52,10 +52,15 @@
 					
 					<div class="mb-3 col-sm-6">
 						<form:label path="destino.codigo">Destino</form:label>
-						<form:select path="destino.codigo" cssClass="form-select">
+						<form:select path="destino.codigo" cssClass="form-select" id="destino-js">
 
-							<form:options items="${nuevaCompra.mapDestinos}" />
-
+						<%-- 	<form:options items="${nuevaCompra.mapDestinos}" /> --%>
+						<c:forEach items="${nuevaCompra.listDestinos}" var="itemDestino">
+						
+						<form:option value="${itemDestino.codigo}" data-precio = "${itemDestino.tipoViaje.precio}"> <c:out value="${itemDestino.lugar} $ ${itemDestino.tipoViaje.precio}"/> </form:option>
+							
+						</c:forEach>
+						
 						</form:select>
 
 					</div>
@@ -75,7 +80,7 @@
 					<div class="mb-3 col-sm-6">
 						
 						<form:label path="transporte.codigo">Transporte</form:label>
-						<form:select path="transporte.codigo" cssClass="form-select">
+						<form:select path="transporte.codigo" cssClass="form-select" >
 
 							<form:options items="${nuevaCompra.mapTransportes}" />
 
@@ -92,12 +97,12 @@
 					
 					<div class="mb-3 col-sm-6">
 						<form:label path="factura.subtotal">Subtotal</form:label>
-						<form:input path="factura.subtotal" cssClass="form-control" readonly="true" />
+						<form:input path="factura.subtotal" cssClass="form-control" readonly="true" id="subtotal" />
 					</div>
 					
 					<div class="mb-3 col-sm-6">
-						<form:label path="factura.total">Total</form:label>
-						<form:input path="factura.total" cssClass="form-control"  readonly="true" />
+						<form:label path="factura.total">Total +(12%)</form:label>
+						<form:input path="factura.total" cssClass="form-control"  readonly="true" id="total"  />
 					</div>
 					
 					<div
@@ -111,10 +116,11 @@
 				
 			</form:form>
 			<p class="mt-3">
-				<a href=" ${context}/compra">Regresar compra</a>
+				<a href=" ${context}/factura">Ver ordenes de compra</a>
 			</p>
 		</section>
 	</div>
 
+<script type="text/javascript" src="static/js/compra.js" ></script>
 </body>
 </html>

@@ -1,7 +1,9 @@
 package com.ideas.app.controller;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
@@ -69,7 +71,8 @@ public class ControllCompra {
 		
 		Map<Integer, String> mapClientes = new HashMap<Integer, String>();
 		Map<Integer, String> mapEmpleados = new HashMap<Integer, String>();
-		Map<Integer, String> mapDestinos = new HashMap<Integer, String>();
+		//Map<Integer, String> mapDestinos = new HashMap<Integer, String>();
+		List<Destino> listDestinos = new ArrayList<Destino>();
 		Map<Integer, String> mapTransportes = new HashMap<Integer, String>();
 		
 		for(Cliente cl: clientes) {
@@ -86,7 +89,8 @@ public class ControllCompra {
 		
 		for(Destino dt: destinos ) {
 			
-			mapDestinos.put(dt.getCodigo(), dt.getLugar() + " $ " + dt.getTipoViaje().getPrecio());
+			//mapDestinos.put(dt.getCodigo(), dt.getLugar() + " $ " + dt.getTipoViaje().getPrecio());
+			listDestinos.add(dt);
 		}
 		
 		for(Transporte tr : transportes ) {
@@ -95,7 +99,8 @@ public class ControllCompra {
 		}
 		compra.setMapClientes(mapClientes);
 		compra.setMapEmpleados(mapEmpleados);
-		compra.setMapDestinos(mapDestinos);
+		compra.setListDestinos(listDestinos);
+		//compra.setMapDestinos(mapDestinos);
 		compra.setMapTransportes(mapTransportes);
 		model.addAttribute("nuevaCompra", compra);
 		return "homeCompra";

@@ -102,7 +102,7 @@ public class Factura {
 	@Override
 	public String toString() {
 		return "Factura [codigo=" + codigo + ", observacion=" + observacion + ", fecha=" + fecha + ", subtotal="
-				+ subtotal + ", total=" + total + ", Compra = "+compra.getCodigo()+"  ]";
+				+ subtotal + ", total=" + total + ",   ]";
 	}
 
 }

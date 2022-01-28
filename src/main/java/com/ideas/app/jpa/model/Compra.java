@@ -1,9 +1,10 @@
 package com.ideas.app.jpa.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -59,7 +60,8 @@ public class Compra {
 	private Map<Integer, String> mapClientes;
 	
 	@Transient
-	private Map<Integer, String> mapDestinos;
+	//private Map<Integer, String> mapDestinos;
+	private List<Destino> listDestinos;
 	
 	@Transient
 	private Map<Integer, String> mapTransportes;
@@ -85,7 +87,8 @@ public class Compra {
 
 	private void initMaps() {
 		mapClientes = new HashMap<Integer,String>();
-		mapDestinos = new HashMap<Integer,String>();
+		//mapDestinos = new HashMap<Integer,String>();
+		listDestinos = new ArrayList<Destino>();
 		mapTransportes = new HashMap<Integer,String>();
 		mapEmpleados = new HashMap<Integer,String>();
 	}
@@ -170,7 +173,7 @@ public class Compra {
 
 
 
-	public Map<Integer, String> getMapDestinos() {
+	/*public Map<Integer, String> getMapDestinos() {
 		return mapDestinos;
 	}
 
@@ -178,8 +181,15 @@ public class Compra {
 
 	public void setMapDestinos(Map<Integer, String> mapDestinos) {
 		this.mapDestinos = mapDestinos;
+	}*/
+	
+	public void setListDestinos(List<Destino> listDestinos) {
+		this.listDestinos = listDestinos;
 	}
 
+	public List<Destino> getListDestinos() {
+		return listDestinos;
+	}
 
 
 	public Map<Integer, String> getMapTransportes() {
